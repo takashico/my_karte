@@ -7,7 +7,10 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="right">
-        <p>アイコンも表示予定</p>
+        <p>こんにちは、<%= @user.user_name %>さん</p>
+        <% if @user.user_image? %>
+          <%= image_tag @user.user_image.url, :size =>'50x50' %>
+        <% end %>
         <i class="fas fa-chevron-circle-right"></i> <%= link_to "マイページ", @user %>
       </div>
     </div>

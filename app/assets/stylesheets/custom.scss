@@ -57,6 +57,18 @@ p {
   line-height: 1.7em;
 }
 
+.top_title {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.top_title:first-letter {
+  font-size: 1.5em;
+  color: #7172ac;
+}
+
 .top_image{
   overflow: hidden;
   background-image: url("/images/top_image.jpg");
@@ -143,6 +155,9 @@ ul li, ol li {
   text-align: center;
 }
 
+.header_field {
+  margin-bottom: 15px;
+}
 #logo {
   float: left;
   text-decoration: none;
@@ -161,10 +176,47 @@ ul li, ol li {
 }
 
 .footer{
+  overflow: hidden;
   margin-top:10px;
   width:100%;
   background:#464646;
   color: #fff;
+}
+/*side bar*/
+
+#sidebar {
+  background: #7386D5;
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul.components {
+  padding: 10px;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 5px;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  padding: 5px;
+  font-size: 1.0em;
+}
+#sidebar ul li a:hover {
+  color: #7386D5;
+  background: #fff;
+}
+
+#content {
+  width: 100%;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
 }
 
 /* forms */
@@ -329,4 +381,165 @@ input, textarea, select, .uneditable-input {
 }
 #submit_btn:active{
   background-color: #BAD3FF;
+}
+
+/*日本地図shop検索*/
+.map_image {
+  position: relative;
+  background-color: #D7EEFF;
+}
+
+.map_image 	a{
+	  text-decoration:none;
+	  color: #000;
+  text-shadow: #fff 2px 0px,
+  #fff -2px 0px,
+  #fff 0px -2px,
+  #fff 0px 2px,
+  #fff 2px 2px,
+  #fff -2px 2px,
+  #fff 2px -2px,
+  #fff -2px -2px,
+  #fff 1px 2px,
+  #fff -1px 2px,
+  #fff 1px -2px,
+  #fff -1px -2px,
+  #fff 2px 1px,
+  #fff -2px 1px,
+  #fff 2px -1px,
+  #fff -2px -1px;
+}
+
+@media screen and (min-width: 300px) {
+  .map_image #hokkaido {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 10%;
+  	left: 50%;
+  }
+
+  .map_image #tohoku {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 34%;
+  	left: 53%;
+  }
+
+  .map_image #kanto {
+  	position: absolute;
+  	font-size: 11px;
+  	top:58%;
+  	left: 52%;
+  }
+
+  .map_image #hokuriku {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 55%;
+  	left: 45%;
+  }
+
+  .map_image #chubu {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 70%;
+  	left: 50%;
+  }
+
+  .map_image #kansai {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 72%;
+  	left: 43%;
+  }
+
+  .map_image #chugoku {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 70%;
+  	left: 36%;
+  }
+
+  .map_image #shikoku {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 82%;
+  	left: 40%;
+  }
+
+  .map_image #kyushu {
+  	position: absolute;
+  	font-size: 11px;
+  	top: 91%;
+  	left: 32%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+.map_image #hokkaido {
+	position: absolute;
+	font-size: 14px;
+	top: 10%;
+	left: 50%;
+}
+
+.map_image #tohoku {
+	position: absolute;
+	font-size: 14px;
+	top: 34%;
+	left: 53%;
+}
+
+.map_image #kanto {
+	position: absolute;
+	font-size: 14px;
+	top:58%;
+	left: 52%;
+}
+
+.map_image #hokuriku {
+	position: absolute;
+	font-size: 14px;
+	top: 55%;
+	left: 45%;
+}
+
+.map_image #chubu {
+	position: absolute;
+	font-size: 14px;
+	top: 70%;
+	left: 50%;
+}
+
+.map_image #kansai {
+	position: absolute;
+	font-size: 14px;
+	top: 72%;
+	left: 45%;
+}
+
+.map_image #chugoku {
+	position: absolute;
+	font-size: 14px;
+	top: 70%;
+	left: 40%;
+}
+
+.map_image #shikoku {
+	position: absolute;
+	font-size: 14px;
+	top: 82%;
+	left: 43%;
+}
+
+.map_image #kyushu {
+	position: absolute;
+	font-size: 14px;
+	top: 91%;
+	left: 38%;
+}
+}
+.map_image 	a:hover {
+  text-decoration: none;
+	color: #FF8856;
 }
