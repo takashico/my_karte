@@ -1,6 +1,15 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
-<%= link_to 'プロフィールを編集', edit_user_registration_path, class: "btn btn-primary" %>
-<%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
-<%= @user.user_name %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1><%= @user.user_name %></h1>
+    <div class="center">
+      <%= link_to 'お店を探す', '#', class: "btn btn-primary" %>
+      <%= link_to 'プロフィールを編集', edit_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+    </div>
+    <h1>My カルテ</h1>
+    <div class="center">
+      <%= link_to 'Myカルテを作成', '#', class: "btn btn-primary" %>
+      <p>あまり会話したくない、etc...</p>
+    </div>
+  </div>
+</div>

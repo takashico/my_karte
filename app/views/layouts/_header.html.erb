@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= link_to "MYカルテ", root_path, id: "logo" %>
+  </div>
+</div>
+<% if user_signed_in?%>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="right">
+        <p>アイコンも表示予定</p>
+        <i class="fas fa-chevron-circle-right"></i> <%= link_to "マイページ", @user %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="top_image">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2"">
+        <div class="header_font">初めての店があなたの行きつけ</div>
+        <ul>
+          <li>お店に入りたいけど店員に話しかけられるのがイヤ</li>
+          <li>カット中の会話はめんどくさい etc...</li>
+        </ul>
+        <div class="header_font">あなたに合ったサービスを提供します</div>
+      </div>
+    </div>
+  </div>
+<% end %>

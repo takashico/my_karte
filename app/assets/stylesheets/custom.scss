@@ -3,9 +3,9 @@
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
+// body {
+//   padding-top: 60px;
+// }
 
 section {
   overflow: auto;
@@ -57,6 +57,19 @@ p {
   line-height: 1.7em;
 }
 
+.top_image{
+  overflow: hidden;
+  background-image: url("/images/top_image.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 100px;
+}
+
 //flash,システムメッセージ
 .notice {
   background-color: #BAD3FF;
@@ -88,25 +101,57 @@ p {
     color: $state-danger-text;
   }
 }
+@media screen and (min-width: 768px) {
+  ul, ol {
+    padding-left: 5em;
+    margin: 0 25%;
+  }
+
+  ul li, ol li {
+    line-height: 1.5; /*文の行高*/
+    padding: 0.5em 0; /*前後の文との余白*/
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+ul, ol {
+  padding-left: 5em;
+}
+
+ul li, ol li {
+  line-height: 1.5; /*文の行高*/
+  padding: 0.5em 0; /*前後の文との余白*/
+  font-weight: bold;
+  color: #fff;
+}
+
 //プロフィール変更ページで使用
 .attention_box {
-    padding: 0.5em 1em;
-    margin-top: 2em;
-    font-weight: bold;
-    border: solid 5px #FF8856;
+  padding: 0.5em 1em;
+  margin-top: 2em;
+  font-weight: bold;
+  border: solid 5px #FF8856;
 }
 //header
-.header_area {
-  margin-bottom: 50px;
+.header_font {
+  color: #fff;
+  line-height: 1;
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
 }
+
 #logo {
   float: left;
+  text-decoration: none;
   font-size: 2.0em;
-  color: #fff;
+  color: #A4C6FF;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 @mixin box_sizing {
@@ -116,9 +161,10 @@ p {
 }
 
 .footer{
-  margin-top:100px;
+  margin-top:10px;
   width:100%;
-  background:#EEEEEE;
+  background:#464646;
+  color: #fff;
 }
 
 /* forms */
@@ -131,7 +177,7 @@ input, textarea, select, .uneditable-input {
 
 //ログインボックス
 .login_box {
-  margin: auto;
+  margin: 10px auto;
   width: 400px;
   height: auto;
   padding-left: 50px;
@@ -139,6 +185,7 @@ input, textarea, select, .uneditable-input {
   border: 3px solid;
   border-color: #eee;
   text-align: center;
+  background-color: #fff;
 }
 //ボタン関係
 .btn_position {

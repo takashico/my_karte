@@ -1,23 +1,10 @@
-<div class="col-md-6 col-md-offset-3">
-  <div class="login_box">
-    <p>ポートフォリオ用ログインができます</p>
-    <%= form_for(@user, url: user_session_path) do |f| %>
-      <%= f.hidden_field :email, :value => "test@test.com" %>
-      <%= f.hidden_field :password, :value => "testuser" %>
-      <div id="testuser_login" class="actions btn_position">
-        <%= f.submit "テストユーザーでログイン", class: "btn btn-success btn-block" %>
-      </div>
-    <% end %>
+<% provide(:title, 'ホーム') %>
+<% if user_signed_in?%>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2>ここにお店の情報を記載予定</h2>
+    </div>
   </div>
-  <div id="login_input_field" class="login_box">
-    <h1>Instagram-Test</h1>
-    <%= render 'users/sessions/new' %>
-    <p>または</p>
-    <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class: "btn btn-primary btn-block" %><br>
-    <%= link_to 'パスワードをお忘れた場合', new_user_password_path %><br>
-  </div>
-  <div id="get_account" class="login_box">
-    <p>アカウントをお持ちでないですか？</p>
-    <%= link_to 'Facebookで登録する', user_facebook_omniauth_authorize_path %>
-  </div>
-</div>
+<% else %>
+  <%= render 'login_form' %>
+<% end %>
