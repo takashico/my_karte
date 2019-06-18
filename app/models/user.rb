@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
   validates :user_name, presence: true, length: { maximum: 50 }
+  validates :provider, presence: true
+  validates :uid, presence: true
   validate :picture_size
   mount_uploader :user_image, PictureUploader
 

@@ -1,17 +1,10 @@
-<div class="wrapper">
-    <!-- Sidebar -->
-  <nav id="sidebar">
-    <div class="side_bar">
-      <ul class="list-unstyled components">
-        <li><%= link_to 'EDIT', edit_user_registration_path %></li>
-        <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
-      <ul>
-    </div>
-  </nav>
-    <!-- Page Content -->
-  <div id="content">
+
+<div class="row">
+  <div class="col-md-6">
     <div class="top_title">お店を探す</div>
     <%= render 'shop_map' %>
+  </div>
+  <div class="col-md-6">
     <div class="top_title">MY カルテ</div>
     <div class="center">
       <%= link_to 'Myカルテを作成', '#', class: "btn btn-primary" %>
